@@ -1,0 +1,116 @@
+			<script src='includes/jquery-ui/js/jquery-ui-1.8.10.custom.min.js' >	</script>
+			<link rel='stylesheet' type='text/css' href='includes/jquery-ui/css/jquery-ui-1.8.10.custom.css'>
+			<table class='page' cellpadding='0' cellspacing='0'>
+			<tr>
+				<td class='top_left1'>&nbsp;</td>
+				<td class='top_left2'>
+				</td>
+				<td class='top_center' >
+					<table width='100%' style='border-bottom:dotted 1px #999999;font-size:12px;font-family:verdana;letter-spacing:1'>
+						<tr>
+							<td align='center' style='padding-top:20px' valign='top'>
+								<div style='float:left'>
+									Terjemah : 
+									<?php 
+									$arr_value = array('Indonesia','English','Arab Latin');
+									$arr_title = array('indonesia','english','latin_id');
+									echo combobox($_SESSION[terjemah],' 
+									onchange="ganti_terjemah()"
+									style="font-size:12px;width:100px" 
+									','cmb_terjemah',$arr_title,$arr_value ); 
+									?>			
+									Surat : 
+									<?php 
+									$arr_sura =  get_column("SELECT name_indonesia FROM sura ORDER BY `index` ");
+									$sura_name =  exec_scalar("SELECT `name_indonesia` FROM sura WHERE `index`='{$_SESSION[sura]}'  ");
+									echo autocomplete($sura_name,' style="font-size:12px" ','acp_sura',$arr_sura ); 
+									?>
+									
+									Ayat : <input id='txt_aya_awal' name='txt_aya_awal' size='3' style='font-size:12px' value='<?php echo $_SESSION[aya_awal]?>' > 
+									- <input id='txt_aya_akhir' name='txt_aya_akhir' size='3' style='font-size:12px' value='<?php echo $_SESSION[aya_akhir]?>' >
+									<input style='font-size:12px' type='button' value='TAMPILKAN' onclick='ganti_sura()'>
+								
+								</div>
+							
+								<div style='float:right;'>
+									
+									
+									Ulang Ayat 	: 	<input id='txt_ulang_aya' 		name='txt_ulang_semua' 	size='1' style='font-size:12px' value='<?php echo $_SESSION[ulang_aya]?>' > 
+									Ulang Halaman : 	<input id='txt_ulang_semua' 	name='txt_ulang_aya' 	size='1' style='font-size:12px' value='<?php echo $_SESSION[ulang_semua]?>' > 
+									<input style='font-size:12px' type='button' value='PROSES' onclick='ganti_sura()'>
+								</div>
+
+								<?php
+									echo "
+									<script>
+										var arr_sura = Array();
+									";
+									foreach($arr_sura as $i => $sura){
+										echo "
+										arr_sura[".($i+1)."] = \"".trim($sura)."\" ;
+										";
+									}
+									
+									echo "
+									</script>";
+								?>
+							</td>
+						</tr>
+					</table>
+					
+				
+				</td>
+
+				<td class='top_right2'>&nbsp;</td>
+				<td class='top_right1'>&nbsp;</td>
+				
+			</tr>
+			<tr>
+				<td class='top_left3'>&nbsp;</td>
+				<td rowspan='3' colspan='3' class='content' valign='top'>
+					<!--<center><b>Masih dalam percobaan, silahkan laporkan jika ada error. <br><b></center> -->
+					<?php 
+						echo $content;
+					?>
+					<script>
+					<?php 
+						echo $script;
+					?>
+					<!-- alert(arr_sound[0]); -->
+					</script>
+					<script src='js/hafalan.js?dummy=4'></script>
+
+				</td>
+				<td class='top_right3'>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class='middle_left'> &nbsp;</td>
+				<td class='middle_right'> &nbsp;</td>
+			</tr>
+			<tr>
+				<td class='bottom_left3'>&nbsp;</td>
+				<td class='bottom_right3'>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class='bottom_left1'>&nbsp;</td>
+				<td class='bottom_left2'>&nbsp;</td>
+				<td class='bottom_center' align='center'>
+					<a 
+					onmousemove='move_petunjuk("Ke halaman selanjutnya",event)' 
+					onmouseout='hide_petunjuk()'
+					href='?mod=quran.hafalan.show&page=<?php echo $_SESSION[page]+1 ?>' class='navigasi' > 
+						<img src='images/next.png' alt='<<' height='22px'>
+					</a>
+					<a 
+					onmousemove='move_petunjuk("Ke halaman sebelumnya",event)' 
+					onmouseout='hide_petunjuk()'
+					href='?mod=quran.hafalan.show&page=<?php echo $_SESSION[page]-1 ?>' class='navigasi' > 
+						<img src='images/prev.png' alt='>>' height='22px'>
+					</a>
+				</td>
+
+				<td class='bottom_right2'>&nbsp;</td>
+				<td class='bottom_right1'>&nbsp;</td>
+				
+			</tr>
+		</table>

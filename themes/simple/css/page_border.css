@@ -1,0 +1,94 @@
+
+.page {
+	background-color:#fffeee;
+	height:400px;
+	width:100%;
+}
+	
+.page .content{
+	padding:0px;
+}
+
+.page .top_left1{
+	height:52px; !important;
+	width:52px; 
+	background :url(../images/top_left1.png) no-repeat;
+}
+
+.page .top_left2{
+	width:119px;
+	background :url(../images/top_left2.png) no-repeat;
+}
+
+.page .top_left3{
+	height:119px;
+	background :url(../images/top_left3.png) no-repeat;
+}
+
+.page .top_center{
+	background :url(../images/top_center.png) 0px 8px repeat-x ;
+}
+
+
+.page .top_right2{
+	width:119px;
+	background :url(../images/top_right2.png) no-repeat;
+}
+
+.page .top_right1{
+	width:52px;
+	background :url(../images/top_right1.png) no-repeat;
+
+}
+
+.page .top_right3{
+	height:119px;
+	background :url(../images/top_right3.png) 24px 0px no-repeat;
+}
+
+.page .middle_left{
+	background :url(../images/middle.png) 8px repeat-y;
+	
+}
+
+.page .middle_right{
+	background :url(../images/middle.png) 35px repeat-y;
+	
+}
+
+.page .bottom_left1{
+	height:52px;
+	width:52px;
+	background :url(../images/bottom_left1.png) no-repeat;
+}
+
+.page .bottom_left2{
+	width:119px;
+	background :url(../images/bottom_left2.png) no-repeat;
+}
+
+.page .bottom_left3{
+	height:119px;
+	background :url(../images/bottom_left3.png) no-repeat;
+}
+
+.page .bottom_center{
+	background :url(../images/top_center.png) 0px 36px repeat-x ;
+}
+
+
+.page .bottom_right2{
+	width:119px;
+	background :url(../images/bottom_right2.png) no-repeat;
+}
+
+.page .bottom_right1{
+	width:52px;
+	background :url(../images/bottom_right1.png) no-repeat;
+
+}
+
+.page .bottom_right3{
+	height:119px ;
+	background :url(../images/bottom_right3.png) 24px 0px no-repeat;
+}

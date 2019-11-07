@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "KFGQPC_Naskh";
+    src: local("KFGQPC Uthman Taha Naskh"), url("http://localhost/fonts/KFC_naskh.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "PDMS_IslamicFont";
+    font-style: normal;
+    font-weight: normal;
+    src: url("http://localhost/fonts/PDMS_IslamicFont.eot?#iefix") format("embedded-opentype"), 
+		 url("http://localhost/fonts/PDMS_ISLAMICFONT.ttf") format("truetype");
+}
+
+body {
+	background-color:#fffeee;
+}
+.arab{
+	width:50%;
+	border-left: dotted 1px black;
+	padding-left:20px;
+	direction:rtl;
+	text-align:justify;
+	line-height:180%;
+	vertical-align:top;
+}
+.bismillah_con {
+	width:400px;
+	font-size:25px;
+	font-family:KFGQPC_Naskh;
+	line-height:170%;
+	padding-top:10px;
+	height:50px;
+	background:url(../images/bismillah.png) no-repeat;
+	cursor:pointer;
+}
+.bismillah_con  a{
+	text-decoration:none;
+	color:black;
+}
+.bismillah_con  a:hiver{
+	background-color:#eeddff;
+}
+
+.sura_no{
+	color:darkgreen;
+	cursor:pointer;
+	background-color:transparent;
+	text-decoration:none;
+}
+a.sura_no:hover{
+	background-color:#ceefef;
+}
+
+.kurung{
+	color:brown;
+	font-family:KFGQPC_Naskh;
+}
+
+.terjemah{
+	line-height:150%;
+	vertical-align:top;
+	text-align:justify;
+	padding-right:20px;
+	font-family:verdana;
+}
+.latin {
+	color:darkblue;
+	font-family:verdana;
+}
+.latin strong, .terjemah_playing strong{
+	/*font-size:0px;*/
+	color:#ABABAB;
+}
+
+a.navigasi {
+	text-decoration:none;
+	font-size:12px;
+	font-family:lucida;
+}
+
+#next_page{
+font-size:0px;visibility:hidden;
+}
+
+
+.playing{
+	background-color:#dceedc;
+}
+.terjemah_playing{
+	line-height:150%;
+	vertical-align:top;
+	text-align:justify;
+	padding-right:20px;
+	background-color:#dceedc;
+}
+
+.daftar_sura{
+	float:left;
+	margin-left:20px;
+	border-collapse:collapse;
+	font-family:verdana;
+	font-size:12px;
+}
+
+.daftar_sura th{
+	padding:5px;
+}
+.daftar_sura td{
+	text-align:center;
+}
+
+.daftar_sura tr{
+	cursor:pointer;
+}
+
+.daftar_sura tr:hover{
+	background-color:#eeddff;
+	color:blue;
+	
+}
+
+.frm_cari * {
+	font-family:verdana;
+	font-size:12px;
+}

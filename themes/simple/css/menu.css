@@ -1,0 +1,66 @@
+.menu_top_container {
+    background-color: #EFEFDD;
+    border-bottom: 2px solid #DDBBAA;
+    border-left: 1px solid #ABABAB;
+    border-right: 1px solid #ABABAB;
+    border-top : 20px solid #7d1100;
+    font-size: 11px;
+    font-family:verdana,lucida;
+    font-weight: bold;
+    height: 100px;
+    padding-top: 10px;
+	padding-left:5px;
+    width: 100%;
+}
+
+.menu_top{
+	width:70px;
+	height:65px;
+	float:left;
+	margin-left : 5px;
+	margin-right : 2px;
+	border-top :solid 1px #CDCDCD;
+	border-left :solid 1px #CDCDCD;
+	border-right : solid 2px #ABABAB ;
+	border-bottom : solid 2px #ABABAB ;
+	text-align:center;
+}
+
+#selected.menu_top{
+	background-color:red;
+}
+
+.menu_top:hover{
+	background-color:#DDEFEF;
+	text-decoration:none;
+}
+
+.menu_top a{
+	text-decoration:none;
+	color:#0044BB;
+}
+
+.menu_top a:hover{
+	color:brown;
+	text-decoration:underline;
+}
+
+	.menu_top img{
+		border:none;
+		width:60px;
+		margin:3px;
+	}
+
+.pengaturan{
+	border-color: #CDCDCD #ABABAB #ABABAB transparent;
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    float: left;
+    height: 60px;
+	padding : 5 5 0 5px ;
+}
+
+.pengaturan_con *{
+	font-size:12px;
+	font-family:verdana;
+}

@@ -1,0 +1,150 @@
+﻿<html>
+	<head>
+	</head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Al Quran Terjemah Per KATA ONLINE , Shahih Muslim GRATIS, Pencarian Tercanggih, dan Murotal</title>
+	<link rel='stylesheet' type='text/css' href='themes/simple/css/page_border.css'>
+	<link rel='stylesheet' type='text/css' href='themes/simple/css/main.css'>
+	<link rel='stylesheet' type='text/css' href='themes/simple/css/menu.css'>
+	<script src='includes/jquery-ui/js/jquery-1.4.4.min.js'></script>
+	<script src='includes/jwplayer/jwplayer.js'></script>
+	<script src='js/terjemah_per_kata.js'></script>
+	<body >
+		<div id='terjemah_con' 
+			    style='background-color:#FFFFFF;
+				visibility:hidden;
+				position:absolute;
+				font-family:verdana;
+				font-size:12px;
+				border:solid 1px brown;
+				padding:5px;
+				line-height:150%;
+				z-index:0;'>
+		</div>
+<?php
+	if(strpos($_GET[mod],'quran.murotal')>-1||strpos($_GET[mod],'quran.hafalan')>-1)
+		echo "
+		<div style='position:fixed;bottom:0px;width:100%;'>
+			<table align='center' >
+			<tr><td align='center'>
+				<input id='balik_status' type='button' onclick='balik_status()' 
+						style='font-weight:bold;font-family:verdana;color:white;background-color:#222222;padding:5px' 
+						value='Pause Murotal'>
+				<div id='player'></div>
+			
+			</td>
+			</tr>
+			</table>
+		</div>
+		";
+?>
+		<table width='100%' cellpadding='0' cellspacing='0' border='0' align='center'>
+			<tr>
+				<td colspan='5' >
+					<div class='menu_top_container'>
+						<div class="menu_top" <?php selected('quran.beranda') ?> >
+							<a href="?mod=quran.beranda.show">
+								<img src="images/beranda.png">
+								<br>
+								Beranda
+							</a>
+						</div>
+						<div class="menu_top" <?php selected('quran.daftar_sura') ?> >
+							<a href="?mod=quran.daftar_sura.show">
+								<img src="images/daftar_sura.png?dummy=1">
+								<br>
+								Daftar Surat
+							</a>
+						</div>
+						<div class="menu_top" <?php selected('quran.murotal') ?> >
+							<a href="?mod=quran.murotal.show">
+								<img src="images/murotal.png">
+								<br>
+								Murotal
+							</a>
+						</div>
+						<div class="menu_top" <?php selected('quran.hafalan') ?> >
+							<a href="?mod=quran.hafalan.show">
+								<img src="images/hafalan.png">
+								<br>
+								Hafalan
+							</a>
+						</div>
+						<div class="menu_top" <?php selected('quran.pencarian') ?> >
+							<a href="?mod=quran.pencarian.show">
+								<img src="images/pencarian.png">
+								<br>
+								Pencarian
+							</a>
+						</div>
+						<div class="menu_top" <?php selected('hadits.pencarian') ?> >
+							<a href="?mod=hadits.pencarian.show">
+								<img src="images/hadits.png">
+								<br>
+								Hadits Muslim
+							</a>
+						</div>
+<!--						<div class="menu_top" <?php selected('bible.pencarian') ?> >
+							<a href="?mod=bible.pencarian.show&page_cari=1">
+								<img src="images/bible.png">
+								<br>
+								Al Kitab
+							</a>
+						</div>
+-->						<div class="menu_top" <?php selected('quran.pengaturan') ?> >
+							<a href="javascript:show_pengaturan()">
+								<img src="images/pengaturan.png">
+								<br>
+								Pengaturan
+							</a>
+						</div>
+							<?php
+							include_once("mod/utility/pengaturan.class.php");
+							$pengaturan = new pengaturan();
+							$pengaturan->show();
+							?>
+<!--
+						<div class="menu_top" <?php selected('utility.download') ?> >
+							<a href="?mod=utility.download.show">
+								<img src="images/download.png">
+								<br>
+								Download
+							</a>
+						</div>
+-->					
+					<?php
+					if($_SESSION[grup]==1){
+						echo '
+						<div class="menu_top"  >
+							<a href="?mod=utility.login.logout">
+								<img src="images/login.png">
+								<br>
+								Logout
+							</a>
+						</div>
+						';
+					}
+					else{					
+						echo '
+						<div class="menu_top"  >
+							<a href="?mod=utility.login.show">
+								<img src="images/login.png">
+								<br>
+								Login
+							</a>
+						</div>
+						';
+					}
+					
+					?>
+					</div>
+					<br>
+				</td>
+			</tr>
+			</table>
+			<?php
+			echo $contents;
+			?>
+		<br><br><br><br><br><br>
+	</body>
+</html>

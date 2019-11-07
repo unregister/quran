@@ -1,0 +1,17 @@
+Reciter: Mishari bin Rashid al-Afasy (مشاري بن راشد العفاسي)
+Recitation license: UNKNOWN
+
+Upstream uploader: <http://everyayah.com/data/Alafasy_128kbps>
+Upstream license: <http://creativecommons.org/licenses/by-nc/2.5/ca/>
+
+re-encoding command: 'lame -m m -b 40 --resample 22.05 "$infile" "$outfile"'
+Last Update: Sun Oct 12 23:00:13 EDT 2008
+
+Contact: Mohammad <mohammad@zekr.org>
+Packaging license: <http://creativecommons.org/licenses/by-nc/2.5/ca/>
+Website: <http://zekr.org/quran/recitations>
+
+Codec: MPEG 2 Audio, Layer 3 (MP3)
+Channels: Mono
+Sample rate: 22050 Hz
+Bitrate: 40 kbps
